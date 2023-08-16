@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ToDo LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="toggle_checkbox">
+    
+    <label for="toggle_checkbox">
+        <div id="star">
+            <div class="star" id="star-1">★</div>
+            <div class="star" id="star-2">★</div>
+        </div>
+        <div id="moon"></div>
+    </label>
+
+    <div class="todo-container">
+        <div class="add-task">
+            
+            <input class = "text" type="text">
+            <span class="plus">+</span>
+    </div>
+
+    <div class="tasks-content">
+            <span class="no-tasks-message">Нет задач для отображения</span>
+    </div>
+
+    <div class="task-stats">
+    <div class="tasks-count">
+            Задачи <span>0</span>
+    </div>
+
+    <div class="tasks-completed">
+            Выполнено <span>0</span>
+    </div>
+    </div>
+    
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+</body>
+
+</html>
