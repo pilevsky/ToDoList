@@ -9,7 +9,7 @@ body {
 .todo-container {
     width: 600px;
     margin: 30px auto 0;
-    background-color: #f6f6f6;
+    background-color:#878fe5;
 }
 
 .todo-container .add-task {
@@ -22,7 +22,7 @@ body {
     display: inline-block;
     padding: 10px 15px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
     width: calc(100% - 15px);
     color: #fff;
     font-size: 20px;
@@ -57,13 +57,17 @@ body {
 }
 
 .todo-container .tasks-content .no-tasks-message {
-    color: #777;
-    font-size: 15px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 17px;
+    text-align: center;
+    font-weight:500;
+  
 }
 
 .todo-container .tasks-content>span {
     display: block;
-    background-color: #fff;
+    background-color:#878fe5;
     padding: 10px;
 }
 
@@ -88,12 +92,12 @@ body {
 
 .task-stats {
     overflow: hidden;
-    margin: 10px auto;
     width: 600px;
     font-size: 10px;
 }
 
 .task-stats .tasks-count {
+    color: white;
     width: 50%;
     float: left;
     padding: 10px;
@@ -101,6 +105,7 @@ body {
 }
 
 .task-stats .tasks-completed {
+    color:white;
     width: 50%;
     float: right;
     padding: 10px;
@@ -125,6 +130,25 @@ body {
     background-color: #E91E63;
 }
 
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    margin: 5px 0;
+}
+
+.list-group-item{
+    color: white;
+    height: auto;
+
+}
+
+.task-title {
+    display: flex;
+    word-break: break-all;
+    width: 400px;
+    color: white;
+}
+
 * {
     user-select: none;
 }
@@ -136,7 +160,7 @@ body {
 
 body {
     margin: 0;
-    background-color: #fff;
+    background-color: rgba(135, 143, 229, 0.5);
 }
 
 #toggle_checkbox {
@@ -215,7 +239,7 @@ label {
 }
 
 #toggle_checkbox:checked+label {
-    background-color: #000;
+    background-color: #282828;
 }
 
 #toggle_checkbox:checked+label #star {
@@ -234,7 +258,14 @@ label {
 }
 
 #toggle_checkbox:checked+label #moon:before {
-    background-color: #000;
+    background-color: #282828;
+}
+
+.task-item__buttons{
+    display: flex;
+    position:relative;
+    left: 440px;
+    bottom: 27px;
 }
 
 .btnDone {
@@ -248,9 +279,6 @@ label {
     display: flex;
     justify-content:right;
     align-items: center;
-    position: relative;
-        left: 440px;
-        bottom: 27px;
 }
 
 .btnDelete {
@@ -264,9 +292,6 @@ label {
         display: flex;
         justify-content: right;
         align-items: center;
-        position: relative;
-        left: 440px;
-        bottom: 27px;
 }
 
 .btnDone:hover {
