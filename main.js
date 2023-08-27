@@ -89,7 +89,7 @@ function doneTask(event) {
     let taskTitle = parentNode.querySelector(".task-title");
     if (
       getComputedStyle(taskTitle).textDecoration ==
-      "line-through solid rgb(0, 0, 0)"
+      "line-through solid rgb(255, 255, 255)"
     ) {
       taskTitle.style = "text-decoration:none";
       tasksCompleted.pop("1");
