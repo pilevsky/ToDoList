@@ -5,6 +5,7 @@ let noTaskMsg = document.querySelector(".no-tasks-message");
 let taskList = document.querySelector(".tasks-content");
 let toggleCheckbox = document.querySelector("#toggle_checkbox");
 let body = document.querySelector("body");
+let btnDone = document.querySelector(".btnDone");
 let tasksCount = [];
 let tasksCompleted = [];
 
@@ -67,17 +68,29 @@ taskList.addEventListener("click", deleteTask);
 taskList.addEventListener("click", doneTask);
 
 function deleteTask(event) {
-  if (event.target.dataset.action == "delete") {
-    let parentNode = event.target.closest(".card");
-    parentNode.remove();
-    tasksCount.pop("1");
-    let count = document.querySelector(".count");
-    count.innerHTML = tasksCount.length;
-    tasksCompleted.pop("1");
-    let completed = document.querySelector(".completed");
-    completed.innerHTML = tasksCompleted.length;
+  if (event.target.dataset.action === "delete") {
+    let parentNode = event.target.closest(".list-group-item");
+    let taskTitle = parentNode.querySelector(".task-title");
+    if (
+      getComputedStyle(taskTitle).textDecoration ==
+      "line-through solid rgb(255, 255, 255)"
+    ) {
+      let parentNode = event.target.closest(".card");
+      parentNode.remove();
+      tasksCount.pop("1");
+      let count = document.querySelector(".count");
+      count.innerHTML = tasksCount.length;
+      tasksCompleted.pop("1");
+      let completed = document.querySelector(".completed");
+      completed.innerHTML = tasksCompleted.length;
+    } else {
+      let parentNode = event.target.closest(".card");
+      parentNode.remove();
+      tasksCount.pop("1");
+      let count = document.querySelector(".count");
+      count.innerHTML = tasksCount.length;
+    }
   }
-
   if (taskList.children.length === 1) {
     noTaskMsg.classList.remove("none");
   }
